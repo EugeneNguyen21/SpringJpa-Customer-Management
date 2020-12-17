@@ -933,81 +933,50 @@ SELECT|sys.sys_config:null
     <table id="291" parent="4" name="customers">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="292" parent="4" name="hibernate_sequence">
+    <table id="292" parent="4" name="provinces">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="293" parent="4" name="provinces">
-      <Engine>MyISAM</Engine>
-    </table>
-    <table id="294" parent="4" name="provinces_customers">
-      <Engine>MyISAM</Engine>
-    </table>
-    <column id="295" parent="291" name="id">
+    <column id="293" parent="291" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="296" parent="291" name="firstName">
+    <column id="294" parent="291" name="firstName">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="297" parent="291" name="lastName">
+    <column id="295" parent="291" name="lastName">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="298" parent="291" name="province_id">
+    <column id="296" parent="291" name="province_id">
       <Position>4</Position>
       <DataType>bigint|0s</DataType>
     </column>
-    <index id="299" parent="291" name="FKlg0qx2aec694jbt1pll3g5kqd">
+    <index id="297" parent="291" name="FKlg0qx2aec694jbt1pll3g5kqd">
       <ColNames>province_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="300" parent="291" name="PRIMARY">
+    <key id="298" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="301" parent="292" name="next_val">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-    </column>
-    <column id="302" parent="293" name="id">
+    <column id="299" parent="292" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="303" parent="293" name="name">
+    <column id="300" parent="292" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <key id="304" parent="293" name="PRIMARY">
+    <key id="301" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
-    </key>
-    <column id="305" parent="294" name="Province_id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="306" parent="294" name="customers_id">
-      <Position>2</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="307" parent="294" name="UK_8wovlrob9x93bevbeml2v4l4v">
-      <ColNames>customers_id</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="308" parent="294" name="FKfgacm1tdxs2lpv3odfy7t10le">
-      <ColNames>Province_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="309" parent="294" name="UK_8wovlrob9x93bevbeml2v4l4v">
-      <ColNames>customers_id</ColNames>
-      <UnderlyingIndexName>UK_8wovlrob9x93bevbeml2v4l4v</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

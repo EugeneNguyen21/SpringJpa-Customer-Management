@@ -7,10 +7,13 @@ import javax.persistence.*;
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;
+
+    @ManyToOne
+    private Province province;
 
     public Customer() {}
 
@@ -19,13 +22,23 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "province_id")
-    private Province province;
-
     @Override
     public String toString() {
         return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
+    }
+
+    public Customer(Long id, String firstName, String lastName, Province province) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.province = province;
+    }
+
+    public Province getProvince() {
+        return province;
+    }
+
+    public void setProvince(Province province) {
+        this.province = province;
     }
 
     public Long getId() {
